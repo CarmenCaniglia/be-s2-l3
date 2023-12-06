@@ -1,17 +1,25 @@
 package Entities;
 
+import java.util.Random;
+
 public class Customer {
     private Long id;
     private String name;
     private int tier;
 
+    //COSTRUTTORE
 
-    public Long getId() {
-        return id;
+
+    public Customer(String name, int tier) {
+        Random random = new Random();
+        this.id = random.nextLong();
+        this.name = name;
+        this.tier = tier;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    //GETTER E SETTER
+    public Long getId() {
+        return id;
     }
 
     public String getName() {
